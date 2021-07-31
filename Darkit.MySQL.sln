@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Darkit.MySQL", "Darkit.MySQL\Darkit.MySQL.csproj", "{B747CBA6-64F9-45B7-A8C4-817071841167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Darkit.MySQL.Demo", "Darkit.MySQL.Demo\Darkit.MySQL.Demo.csproj", "{DAFF33C6-2B0D-4944-9BC7-C140A77D8793}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B747CBA6-64F9-45B7-A8C4-817071841167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B747CBA6-64F9-45B7-A8C4-817071841167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B747CBA6-64F9-45B7-A8C4-817071841167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B747CBA6-64F9-45B7-A8C4-817071841167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFF33C6-2B0D-4944-9BC7-C140A77D8793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFF33C6-2B0D-4944-9BC7-C140A77D8793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFF33C6-2B0D-4944-9BC7-C140A77D8793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFF33C6-2B0D-4944-9BC7-C140A77D8793}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {322B1C9B-6B2E-4595-A011-F2EB364D0E87}
+	EndGlobalSection
+EndGlobal
