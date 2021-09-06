@@ -50,6 +50,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Structures\MySQLBind.cs" />
+    <Compile Include="Structures\MySQLFieldType.cs" />
+    <Compile Include="Structures\MySQLRow.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

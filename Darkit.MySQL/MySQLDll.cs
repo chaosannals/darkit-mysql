@@ -20,6 +20,15 @@ namespace Darkit.MySQL
         [DllImport("libmysql", EntryPoint = "mysql_ping")]
         public extern static int Ping(IntPtr mysql);
 
+        [DllImport("libmysql", EntryPoint = "mysql_errno")]
+        public extern static int ErrNo(IntPtr mysql);
+
+        [DllImport("libmysql", EntryPoint = "mysql_error")]
+        public extern static IntPtr Error(IntPtr mysql);
+
+        [DllImport("libmysql", EntryPoint = "mysql_options")]
+        public extern static int Options(IntPtr mysql, byte name, IntPtr arg);
+
         [DllImport("libmysql", EntryPoint = "mysql_query")]
         public extern static int Query(IntPtr mysql, string sql);
 
@@ -27,7 +36,7 @@ namespace Darkit.MySQL
         public extern static IntPtr RealConnect(IntPtr mysql, string host, string user, string password, string dbname, ushort port, string socket, ulong clientFlag);
 
         [DllImport("libmysql", EntryPoint = "mysql_real_query")]
-        public extern static int RealQuery(IntPtr mysql, byte[] sql, ulong length);
+        public extern static int RealQuery(IntPtr mysql, byte[] sql, long length);
 
         /**
          * 预处理
@@ -37,7 +46,7 @@ namespace Darkit.MySQL
         public extern static IntPtr StmtInit(IntPtr mysql);
 
         [DllImport("libmysql", EntryPoint = "mysql_stmt_prepare")]
-        public extern static int StmtPrepare(IntPtr stmt, string sql, ulong length);
+        public extern static int StmtPrepare(IntPtr stmt, byte[] sql, ulong length);
 
         public static void Initialize()
         {
@@ -47,6 +56,12 @@ namespace Darkit.MySQL
             string field = string.Format("{0}_{1}", prefix, tag);
             byte[] data = Resources.ResourceManager.GetObject(field) as byte[];
             File.WriteAllBytes(path, data);
+        }
+
+        public static string GetError(IntPtr mysql)
+        {
+            IntPtr ep = Error(mysql);
+            return Marshal.PtrToStringAnsi(ep);
         }
     }
 }
